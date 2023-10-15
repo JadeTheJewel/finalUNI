@@ -1,2 +1,2 @@
 # finalUNI
-https://rawcdn.githack.com/JadeTheJewel/finalUNI/87460017015ca259dd5b9e858d26a36ef07fa4f2/idex.html
+https://rawcdn.githack.com/JadeTheJewel/finalUNI/3142483c042a4954f20b7226b40c6e33c40733fe/idex.html
