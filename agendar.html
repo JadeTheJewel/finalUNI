@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-GB" >
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Agendar Reunião</title>
+
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" id='global_css-css' href="news.css">
+    <meta property="og:title" content="UNIAUDI | Planeamento e Informação de Gestão" />
+    <link rel="stylesheet" id='global_css-css' href="news.css" type='text/css' media='all' />
+    <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' id='modernizer-js'></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="imageSN/logo-uni-.png">
+</head>
+<header>
+    <div class="preloader">
+        <video class="loader-video" autoplay muted loop>
+            <source src="images/Logo-3.mp4" type="video/mp4">
+            
+        </video>
+    </div>
+      <style>
+
+body {
+    overflow-y: hidden;
+    color: #120a0a;
+    background: #ffffff;
+    font: 600 16px/18px 'prata', sans-serif;
+    margin: 0; 
+    font-family: prata;
+    text-align: center;
+    width:100w;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader-video {
+    max-width: 100%;
+    max-height: 100%;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; 
+}
+
+.login-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;  
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: url(imageGIF/meeting.jpg) no-repeat center;
+    background-size: cover; 
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    z-index: 1; 
+}
+
+.login-html {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: rgba(115, 54, 54, 0.729);
+    z-index: 2; 
+}
+
+
+.log {
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 5px 10px 10px rgba(144, 2, 2, 0.2);
+  z-index: 10;
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 480px) {
+    .log {
+        width: 90vw; /* More width for smaller screens */
+        padding: 20px 15px 15px 15px; /* Less padding for smaller screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .log {
+        width: 80vw;
+        padding: 30px 20px 20px 20px; 
+    }
+}
+
+/* Large screens (desktops/laptops) */
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+    .log {
+        width: 70vw;
+    }
+}
+
+/* Extra large screens (large desktops, TVs) */
+@media only screen and (min-width: 1200px) {
+    .log {
+        width: 60vw;
+    }
+}
+
+.log::before, 
+.log::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+}
+
+.log::before {
+  left: 40%;
+  bottom: -130%;
+  background-color: rgba(252, 2, 2, 0.15);
+  animation: wawes 6s infinite linear;
+}
+
+.log::after {
+  left: 35%;
+  bottom: -125%;
+  background-color: rgba(69, 52, 52, 0.2);
+  animation: wawes 7s infinite;
+}
+
+@keyframes wawes {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.header-text {
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+.form-container {
+            width: 90%;
+            max-width: 500px;
+            
+            
+        }
+/* For tablets */
+@media only screen and (min-width: 481px) {
+    .form-container {
+        width: 80%; 
+       
+    }
+}
+
+/* For small desktops and laptops */
+@media only screen and (min-width: 769px) {
+    .form-container {
+        width: 70%; /* Further decrease the width for larger screens if needed */
+    }
+}
+
+/* For larger desktops */
+@media only screen and (min-width: 1200px) {
+    .form-container {
+        width: 60%; /* Adjust the width for large desktop screens */
+        /* max-width can stay at 500px if that's your design decision */
+    }
+}
+        
+        
+
+        @media only screen and (max-width: 600px) {
+           
+            
+            .selected-option-content {
+                width: 90%;
+                max-width: none;
+                padding: 10px;
+            }
+
+            
+        }
+
+        h1 {
+    font-size: 1.625rem; /* 26px adjusted to rem for scalability */
+    margin-bottom: 30px;
+    margin-left: 10px; 
+    color: #352525;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 8%; 
+    line-height: 1.15;
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem; /* Smaller text for small screens */
+        margin-bottom: 20px;
+        margin-left: 5px; 
+    }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Slightly larger text for tablets */
+        margin-bottom: 25px;
+        margin-left: 7px; 
+    }
+}
+
+/* Large screens (desktops/laptops) */
+@media only screen and (min-width: 769px) {
+    h1 {
+        font-size: 1.625rem; /* Original size for desktops/laptops */
+    }
+}
+select {
+    width: 100%;
+    padding: 1.25rem;  /* 20px */
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 1.5625rem; /* 25px */
+    background-color: #ffffff;
+    color: #352525;
+    text-align: center;
+}
+
+input[type="button"] {
+    background-image: linear-gradient(to left, #580101, #630006, #7d0008, #980007, #b30202);
+    color: white;
+    border: none;
+    padding: 1.25rem 1.5625rem; /* 20px 25px */
+    font-size: 1.5rem; /* 24px */
+    cursor: pointer;
+    margin-left: 0.625rem; /* 10px */
+    border-radius: 5%;
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 480px) {
+    select, input[type="button"] {
+        font-size: 1.125rem; /* 18px */
+        padding: 0.9375rem 1.25rem; /* 15px 20px */
+    }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    select, input[type="button"] {
+        font-size: 1.25rem; /* 20px */
+        padding: 1.125rem 1.375rem; /* 18px 22px */
+    }
+}
+
+  
+        .selected-option {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(231, 231, 231, 0.95);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        .selected-option.active {
+            display: flex;
+        }
+        .selected-option-content {
+            width: 100%; 
+            height: 100%; 
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+        .close-button {
+            position: absolute;
+            top: 0.625rem; /* 10px */
+            right: 0.625rem; /* 10px */
+            font-size: 0.75rem; /* 12px */
+            background-color: #872637;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 0.3125rem 0.625rem; /* 5px 10px */
+            cursor: pointer;
+            font-weight: 300;
+        }
+        
+        /* Small screens (mobile) */
+        @media only screen and (max-width: 480px) {
+            .close-button {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+        }
+        
+        /* Medium screens (tablets) */
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .close-button {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.7rem;
+            }
+        }
+        
+        /* Large screens (desktops/laptops) */
+        @media only screen and (min-width: 769px) and (max-width: 1199px) {
+            .close-button {
+                font-size: 0.9rem;
+                padding: 0.45rem 0.9rem;
+            }
+        }
+        
+        /* Extra large screens (large desktops, TVs) */
+        @media only screen and (min-width: 1200px) {
+            .close-button {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+        .uniaudi-text {
+    font-size: 2.5rem; /* Adjusted to rem for scalability */
+    color: #fffefe;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    font-family: "Prata";
+    line-height: 1.15;
+    font-weight: 300;
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 480px) {
+    .uniaudi-text {
+        font-size: 1.5rem; /* Adjust the size for small screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .uniaudi-text {
+        font-size: 2rem; /* Slightly larger text for tablets */
+    }
+}
+
+/* Large screens (desktops/laptops) */
+@media only screen and (min-width: 769px) {
+    .uniaudi-text {
+        font-size: 2.5rem; /* Larger text for desktops/laptops */
+    }
+}
+        
+        .header-text {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  /* For tablets */
+@media only screen and (max-width: 768px) {
+    .back-button {
+        font-size: 1.5rem; 
+        padding: 6px 10px; 
+        top: 15px; 
+        left: 15px; 
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 480px) {
+    .back-button {
+        font-size: 1.2rem; 
+        padding: 4px 8px; 
+        top: 10px; 
+        left: 10px; 
+    }
+}
+      </style>
+
+
+    <div class="header">
+        <a href="idex.html" class="back-button">←  Voltar</a>
+        
+      </div>
+
+</header>
+<body>
+    <div class="center-container">
+        <div class="login-wrap"> ... </div>
+        <div class="login-html"> ... </div>
+        
+        <div class="header-text">
+            <div class="uniaudi-text">Marcar reunião Uniaudi</div>
+        </div>
+        <form class="log">
+            <div class="container">
+                <div class="form-container">
+                    <h1>Escolha a Área:</h1>
+                    <select name="category" id="category-select">
+                        <option value="https://calendly.com/admnistracao/30min" selected>Administração: Gestão Empresarial</option>
+                        <option value="https://calendly.com/contabilidade-5rk/30min">Contabilidade: Serviços Financeiros</option>
+                        <option value="https://calendly.com/consultoria-uniaudi/60min">Consultoria: Projetos e candidaturas</option>
+                        <option value="https://calendly.com/fiscalidade/30min">Fiscalidade: Consultoria Fiscal</option>
+                        <option value="https://calendly.com/recursoshumanos-p1k/30min">Recursos Humanos: Gestão de RH</option>
+                    </select>
+                    <br>
+                    <input type="button" value="Marcar" onclick="openLink()">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="selected-option">
+        <div class="selected-option-content">
+            <button class="close-button" onclick="closeSelectedOption()">Fechar</button>
+            <iframe id="selectedIframe" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+    <script>
+        var selectedOption = document.querySelector('.selected-option');
+        var selectedIframe = document.getElementById('selectedIframe');
+
+        function openLink() {
+            var categorySelect = document.getElementById('category-select');
+            if (categorySelect.value !== '') {
+                selectedOption.classList.add('active');
+                selectedIframe.src = categorySelect.value;
+            }
+        }
+
+        function closeSelectedOption() {
+            selectedOption.classList.remove('active');
+            selectedIframe.src = 'about:blank';
+            document.getElementById('category-select').value = '';
+        }
+
+        window.addEventListener("load", function () {
+    const preloader = document.querySelector(".preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+        preloader.style.display = "none"; 
+    }, 500); 
+});
+    </script>
+
+<script>
+    function redirectToNews() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+
+  
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  z-index: 10;
+}
+
+.back-button img {
+  width: 30px; /* or whatever size you desire */
+  height: auto; /* maintain aspect ratio */
+  cursor: pointer;
+}
+.back-button :hover {
+background-color: #43b3fe5b;
+border-radius: 50%;
+
+}
+  
+  html {
+    font: 400 1em/1.33 "Times New Roman";
+    background-color: #ffffff;
+  }
+  
+  body {
+    padding-bottom: 3em;
+  }
+
+
+  
+  hr {
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #727272;
+    color: #000000;
+    text-align: center;
+  }
+  
+  hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #e1e1e1;
+  }
+  
+  article {
+    color: #020202;
+    margin-left: 40%;
+    position: relative;
+    max-width: 66em;
+    
+  }
+  
+  header {
+    text-align: center;
+    padding: 0 2em;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  h1 .headline-1,
+  h1 .headline-2 {
+    line-height: 1;
+  }
+  
+  h1 .headline-1 {
+    font-size: 5vw;
+  }
+  
+  h1 .headline-2 {
+    font-size: 8vw;
+  }
+  
+  .subheading {
+    color: #3f3f3f;
+    font-size: 1.5625em;
+    max-width: 25em;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1.5em;
+  }
+  
+  .text-justify {
+    text-align: justify !important
+}
+
+  section {
+    column-width: 14em;
+    column-gap: 1.33em;
+    padding: 0 3em;
+  }
+  
+  section p:first-of-type:first-letter {
+    float: left;
+    font-size: 7em;
+    line-height: 1;
+    margin-top: -0.2em;
+    margin-bottom: -0.2em;
+    margin-right: 0.1em;
+  }
+  
+  img {
+    max-width: 100%;
+    margin-bottom: 1.33em;
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: 480px) {
+    article {
+      margin-left: 0%;
+
+    }
+    h1 .headline-1 {
+      font-size: 7vw;
+    }
+    .back-button {
+      
+      top: 15px;
+      left: 15px;
+      
+    }
+    body {
+      margin: 10;
+    }
+}
+  
+.text-right {
+  position: absolute;
+  
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  padding: 10px;
+  
+}
+
+  blockquote {
+    border-left: 0.5em solid #ccc;
+    font-size: 1em;
+    padding: 0.5em;
+    line-height: 1.5;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 100%;
+    top: 70vh;
+    width: 9em;
+    background: #ffffff;
+  }
+  figcaption {
+    border-left: 0.5em solid #ccc;
+    font-size: 1em;
+    padding: 0.5em;
+    line-height: 1.5;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 100%;
+    top: 87vh;
+    width: 9em;
+    background: #ffffff;
+    
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    color: #ccc;
+    font-size: 1.25em;
+    line-height: 0;
+  }
+  
+  blockquote::before {
+    content: open-quote;
+  }
+  
+  blockquote::after {
+    content: close-quote;
+  }
+  table {
+    border-collapse: collapse;
+   
+   width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding: 10px;
+    margin: 10;
+}
+
+td {
+    border: 1px solid #ddd; /* Adjust border color as per your design needs */
+    padding: 15px; /* Adjust padding as per your design needs */
+    text-align: center;
+    width: 100vw;
+}
+.table-container {
+  
+  overflow-y: auto;
+}
